@@ -3,7 +3,7 @@ const {events} = require('./data.json')
 export default function handler(req, res) {
   const evt = events.filter((ev) => ev.slug === req.query.slug)
 
-  if(req.method === 'Get') {
+  if(req.method === 'GET') {
     res.status(200).json(events)
   } else {
     res.setHeader('Allow', ['GET'])
